@@ -1,0 +1,80 @@
+# Install apache webserver and launch website
+ 2  apt update
+    3  apt install apache2 -y
+    4  clear
+    5  # apt update
+    6  # apt install apache2 -y
+    7  cd /var/www/html/
+    8  ls
+    9  echo "I like vadapav" > index.html
+   10  cat index.html
+   11  systemctl start apache2
+   12  systemctl stop apache2
+   13  systemctl restart apache2
+   14  systemctl status apache2
+   15  top
+# zombie processes
+   16  ps -eaf | grep defunct
+   17  clear
+# user concurrency
+   18  netstat -an | grep -i established | grep -i 80
+   19  ap install net-tools
+   20  apt install net-tools
+   21  netstat -an | grep -i established | grep -i 80
+   22  netstat -an | grep -i established | grep -i 80 | wc -l
+   23  clear
+   24  netstat -tunlp
+   25  vi /etc/passwd
+
+
+# File Descriptor
+
+ 4  find / -name passwd
+    5  find / -name passwd 1>output.logs
+    6  cat output.logs
+    7  find / -name passwd 2>error.logs
+    8  find / -name passwd 2>error.logs 1>output.logs
+
+
+# hardware scanning commands
+free -h # memory
+df -h
+dmidecode -t 0 
+lsblk
+lspcu
+top 
+vmstat
+iostat -d
+# how to find out number of disks
+fdisk -l
+parted
+
+
+# file I/o Operations
+ 35  # how to create 10000 files
+   36  touch {1..1000}.txt
+   37  ls
+   38  cp commands.txt /home/
+   39  rm -fr ?.txt
+   40  rm -fr ??.txt
+   41  rm -fr ???.txt
+   42  ls
+   43  rm -fr ????.txt
+   44  ls
+   45  history
+# create file od various size 
+dd if=/dev/zero of=samosa.txt bs=1M count=1000
+
+ 48  dd if=/dev/zero of=samosa.txt bs=1M count=1000
+   49  ls -lh samosa.txt
+   50  dd if=/dev/zero of=dosa.txt bs=1M count=1
+   51  ls -lh samosa.txt
+   52  ls -lh dosa.txt
+   53  vi commands.txt
+   54  # 1GB -- 65536 files
+   55  # 1GB -- 65536 files  -- 65536 inodes
+   56  # type of filesystem
+   57  # ext2 ,ext3,ext4,xfs , zfs , btrfs
+   58  # 1 sector = 512 bytes
+   59  # 1 block =8 sector = 4096bytes
+
