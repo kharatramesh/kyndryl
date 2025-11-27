@@ -81,4 +81,5 @@ dd if=/dev/zero of=samosa.txt bs=1M count=1000
 # how to check network IP address
 ip a s
 ifconfig -a
-
+==============
+change1
