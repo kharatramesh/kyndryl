@@ -78,3 +78,7 @@ dd if=/dev/zero of=samosa.txt bs=1M count=1000
    58  # 1 sector = 512 bytes
    59  # 1 block =8 sector = 4096bytes
 
+# how to check network IP address
+ip a s
+ifconfig -a
+
