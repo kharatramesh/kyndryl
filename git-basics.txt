@@ -1,0 +1,16 @@
+mkdir /samosa
+cd /samosa
+# git init -m dev
+git init
+ls -al
+
+touch 1.txt
+echo "line1" >> 1.txt
+git add 1.txt
+git add . # for adding multiple files in staging area
+git commit -m "Meaningful message"
+
+git remote add samosa git@github.com:kharatramesh/kyndryl.git
+git remote -v
+
+git push samosa
