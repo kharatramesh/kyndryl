@@ -12,3 +12,5 @@ echo "this file is modified by dev1 user"
 set learn linux everyday and keep unemployment away
 echo $1
 echo $2
+shift 1
+echo $* : $# words
