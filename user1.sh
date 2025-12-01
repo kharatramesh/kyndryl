@@ -7,4 +7,5 @@ echo "Learn Linux EveryDay"
 useradd -m user1 
 
 echo "user1 added successfully"
+echo "this file is modified by dev1 user"
 
